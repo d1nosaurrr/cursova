@@ -17,3 +17,15 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+$grey: #545454;
+$txt-light: #ffffff;
+$txt-grey: #c6c6c6;
+
+$pad: 10px;
+
+@mixin size($h,$w) {
+    height: $h;
+    width: $w;
+}
+

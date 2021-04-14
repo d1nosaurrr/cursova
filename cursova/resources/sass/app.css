@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #545454;
+  justify-content: space-around;
+  height: 75px;
+  width: 100%;
+}
+
+.nav-list {
+  font-size: 20px;
+}
+.nav-list div a {
+  text-decoration: none;
+  color: #c6c6c6;
+  padding: 10px;
+}
+
+.compare, .login {
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #545454;
+  height: 150px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.footer .info {
+  justify-content: space-around;
+}
+
+.clients, .about, .cabinet {
+  padding: 10px;
+  height: auto;
+  width: 100px;
+}
+.clients a, .clients h1, .about a, .about h1, .cabinet a, .cabinet h1 {
+  font-size: 17px;
+  text-align: left;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.cop-text {
+  text-align: center;
+  color: #c6c6c6;
+}
+
+#primary_nav_wrap {
+  margin-top: 15px;
+  background: yellow;
+}
+
+#primary_nav_wrap ul {
+  list-style: none;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#primary_nav_wrap ul a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 32px;
+  padding: 0 15px;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#primary_nav_wrap ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#primary_nav_wrap ul li.current-menu-item {
+  background: #ddd;
+}
+
+#primary_nav_wrap ul li:hover {
+  background: yellow;
+}
+
+#primary_nav_wrap ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 0;
+}
+
+#primary_nav_wrap ul ul li {
+  float: none;
+  width: 200px;
+}
+
+#primary_nav_wrap ul ul a {
+  line-height: 120%;
+  padding: 10px 15px;
+}
+
+#primary_nav_wrap ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
+#primary_nav_wrap ul li:hover > ul {
+  display: block;
+}
+
+.box {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFCB73;
+  text-align: center;
+  border-radius: 25px;
+}
+.box h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type=text], .box input[type=password] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #5ED1BA;
+  padding: 14px 20px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+.box input[type=text] :focus, .box input[type=password] :focus {
+  width: 280px;
+  border-color: #1F7A68;
+}
+.box input[type=submit] {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #1F7A68;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type=submit] :hover {
+  background: #1F7A68;
+}
+
+/*# sourceMappingURL=app.css.map */
