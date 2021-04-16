@@ -25,7 +25,7 @@
             <div class="description">
                 <textarea name="description" cols="30" rows="10" placeholder="Опис" required></textarea>
             </div>
-            <button type="submit">Додати!</button>
+            <button type="submit">Редагувати!</button>
         </div>
     </form>
 @endsection

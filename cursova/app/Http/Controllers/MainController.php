@@ -16,6 +16,7 @@ class MainController extends Controller
 
     }
 
+
     public function category($id)
     {
         $category = Category::where('id', $id)->first();

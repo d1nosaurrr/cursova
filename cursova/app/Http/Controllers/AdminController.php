@@ -63,9 +63,7 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        return view('admin.index', ['categories' => (new Category)->categories(),
-            'subcategories' => (new Category)->subcategories(),
-            'product' => (new Product)->product($id)]);
+        //
     }
 
     /**
@@ -76,7 +74,9 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.edit', ['categories' => (new Category)->categories(),
+            'subcategories' => (new Category)->subcategories(),
+            'product' => (new Product)->product($id)]);
     }
 
     /**

@@ -1,0 +1,21 @@
+.product-list {
+    padding: $pad;
+    margin: 5px;
+    border: 2px solid black;
+
+    thead {
+        height: 30px;
+        font-size: 25px;
+        text-align: center;
+        background-color: #c3c3c3;
+
+        th {
+            border: 1px solid black;
+        }
+    }
+
+    tbody td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+}

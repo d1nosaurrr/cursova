@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\MainController;
@@ -24,9 +26,8 @@ Route::resource('admin/product', 'App\Http\Controllers\AdminController', ['param
     'product' => 'id'
 ]]);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard',  'App\Http\Controllers\AdminController@index')
+    ->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
 
@@ -42,25 +43,11 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/{link}', [NavController::class, 'index'])->name('go-to');
 
 Route::get('/categories', function () {
-    return view('layout.category');
+    return view('layout.category', ['categories' => (new Category)->categories(),
+        'subcategories' => (new Category)->subcategories(),
+        'hit_products' => (new Product)->hit_products()]);
 })->name('category');
 
-Route::get('/about', function () {
-    return view('user_nav.about');
-})->name('about');
-
-Route::get('/contact', function () {
-    return view('user_nav.contacts');
-})->name('contact');
-
-Route::get('/payment-and-delivery', function () {
-    return view('user_nav.delivery');
-})->name('delivery');
-
-Route::get('/return', function () {
-    return view('user_nav.return');
-})->name('return');
-
-Route::get('/news', function () {
-    return view('user_nav.news');
-})->name('news');
+Route::get('/in-progress', function () {
+    return view('user_nav/in_progress');
+})->name('in_progress');

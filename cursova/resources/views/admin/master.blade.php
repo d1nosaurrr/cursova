@@ -11,13 +11,12 @@
     <title>Головна сторінка</title>
 </head>
 <body>
-@include('layout.header')
+@include('admin.layout.header')
+
 <main class="content flex-col">
-@yield('content')
+    @yield('content')
 </main>
 
-<footer class="footer flex-col">
-    @include('layout.footer')
-</footer>
+@include('admin.layout.footer')
 </body>
 </html>

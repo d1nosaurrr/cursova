@@ -24,6 +24,7 @@
     width: 320px;
     font-size: 30px;
     font-style: italic;
+    text-align: center;
 
     a {
         text-decoration: none;
@@ -31,11 +32,34 @@
     }
 }
 
-.login {
+.log-block {
     width: 320px;
     font-size: 20px;
-    text-decoration: none;
-    color: $txt-light;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: $txt-light;
+    }
+}
+
+.admin-header {
+    background-color: $grey;
+    justify-content: space-evenly;
+    @include size(60px, 100%);
+    padding-top: $pad + 10;
+
+    .log-block {
+        width: 320px;
+        font-size: 20px;
+        text-align: center;
+        padding: $pad;
+
+        a {
+            text-decoration: none;
+            color: $txt-light;
+        }
+    }
 }
 
 

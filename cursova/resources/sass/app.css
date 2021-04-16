@@ -52,15 +52,37 @@ html, body {
   width: 320px;
   font-size: 30px;
   font-style: italic;
+  text-align: center;
 }
 .logo a {
   text-decoration: none;
   color: #38c172;
 }
 
-.login {
+.log-block {
   width: 320px;
   font-size: 20px;
+  text-align: center;
+}
+.log-block a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.admin-header {
+  background-color: #333333;
+  justify-content: space-evenly;
+  height: 60px;
+  width: 100%;
+  padding-top: 20px;
+}
+.admin-header .log-block {
+  width: 320px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.admin-header .log-block a {
   text-decoration: none;
   color: #ffffff;
 }
@@ -107,6 +129,14 @@ html, body {
 hr {
   width: 100%;
   border: 1px solid black;
+}
+
+.admin-footer {
+  background-color: #333333;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .flex-row {
@@ -228,6 +258,135 @@ ul {
   text-align: center;
   height: 350px;
   width: 70%;
+}
+
+.more {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+.more [open] {
+  padding: 0.5em;
+}
+
+.more [open] summary {
+  border: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+.product-list {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid black;
+}
+.product-list thead {
+  height: 30px;
+  font-size: 25px;
+  text-align: center;
+  background-color: #c3c3c3;
+}
+.product-list thead th {
+  border: 1px solid black;
+}
+.product-list tbody td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.add {
+  background-color: #38c172;
+}
+.add:hover {
+  background: 0;
+  color: #38c172;
+  border: 2px solid #38c172;
+}
+
+.edit {
+  background-color: #f8cd58;
+}
+.edit:hover {
+  background: 0;
+  color: #f8cd58;
+  border: 2px solid #f8cd58;
+}
+
+.delete {
+  background-color: #e3342f;
+}
+.delete:hover {
+  background: 0;
+  color: #e3342f;
+  border: 2px solid #e3342f;
+}
+
+.add, .edit, .delete {
+  height: 50px;
+  width: 200px;
+  padding: 10px;
+  border: 2px solid white;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+}
+.add:hover, .edit:hover, .delete:hover {
+  text-decoration: none;
+  transition: color 0.3s ease, background 0.3s ease, border 0.3s ease;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-form {
+  margin: 10px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  background-color: #333333;
+  border-radius: 25px;
+  justify-content: center;
+}
+.add-form .form input, .add-form .form textarea, .add-form .form select, .add-form .form button, .add-form .title input, .add-form .title textarea, .add-form .title select, .add-form .title button, .add-form .category input, .add-form .category textarea, .add-form .category select, .add-form .category button, .add-form .price input, .add-form .price textarea, .add-form .price select, .add-form .price button, .add-form .description input, .add-form .description textarea, .add-form .description select, .add-form .description button, .add-form .count input, .add-form .count textarea, .add-form .count select, .add-form .count button {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  border-color: white;
+  background: white;
+  color: black;
+}
+.add-form .form input button:hover, .add-form .form textarea button:hover, .add-form .form select button:hover, .add-form .form button button:hover, .add-form .title input button:hover, .add-form .title textarea button:hover, .add-form .title select button:hover, .add-form .title button button:hover, .add-form .category input button:hover, .add-form .category textarea button:hover, .add-form .category select button:hover, .add-form .category button button:hover, .add-form .price input button:hover, .add-form .price textarea button:hover, .add-form .price select button:hover, .add-form .price button button:hover, .add-form .description input button:hover, .add-form .description textarea button:hover, .add-form .description select button:hover, .add-form .description button button:hover, .add-form .count input button:hover, .add-form .count textarea button:hover, .add-form .count select button:hover, .add-form .count button button:hover {
+  background: #f8cd58;
+}
+.add-form .form input textarea, .add-form .form textarea textarea, .add-form .form select textarea, .add-form .form button textarea, .add-form .title input textarea, .add-form .title textarea textarea, .add-form .title select textarea, .add-form .title button textarea, .add-form .category input textarea, .add-form .category textarea textarea, .add-form .category select textarea, .add-form .category button textarea, .add-form .price input textarea, .add-form .price textarea textarea, .add-form .price select textarea, .add-form .price button textarea, .add-form .description input textarea, .add-form .description textarea textarea, .add-form .description select textarea, .add-form .description button textarea, .add-form .count input textarea, .add-form .count textarea textarea, .add-form .count select textarea, .add-form .count button textarea {
+  height: 75px;
 }
 
 /*# sourceMappingURL=app.css.map */

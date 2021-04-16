@@ -1,8 +1,4 @@
-<header class="header flex-row">
-    <nav class="nav-list flex-row">
-        <div><a href="{{route('in_progress')}}">Доставка/Оплата</a></div>
-        <div><a href="{{route('in_progress')}}">Контакти</a></div>
-    </nav>
+<header class="admin-header flex-row">
     <div class="logo">
         <a href="{{route('main')}}">LOGO</a>
     </div>

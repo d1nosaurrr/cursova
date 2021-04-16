@@ -33,3 +33,10 @@ hr {
     width: 100%;
     border: 1px solid black;
 }
+
+.admin-footer{
+    background-color: $grey;
+    @include size(auto, 100%);
+    position: absolute;
+    bottom: 0;
+}

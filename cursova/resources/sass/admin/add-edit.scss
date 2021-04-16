@@ -1,0 +1,30 @@
+@import "../variables";
+
+.add-form {
+    margin: $pad;
+    @include size(auto, 100%);
+    display: flex;
+    background-color: $grey;
+    border-radius: 25px;
+    justify-content: center;
+
+    .form, .title, .category, .price, .description, .count {
+        input, textarea, select, button {
+            @include size(50px, 100%);
+            text-align: center;
+            padding: $pad;
+            margin: 5px;
+            border-radius: 15px;
+            border-color: white;
+            background: white;
+            color: black;
+
+            button:hover{
+                background: $warning;
+            }
+            textarea {
+                height: 75px;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import "../variables";
+
+.add {
+    background-color: $success;
+
+    &:hover {
+        background: 0;
+        color: $success;
+        border: 2px solid $success;
+    }
+}
+
+.edit {
+    background-color: $warning;
+
+    &:hover {
+        background: 0;
+        color: $warning;
+        border: 2px solid $warning;
+    }
+}
+
+.delete {
+    background-color: $danger;
+
+    &:hover {
+        background: 0;
+        color: $danger;
+        border: 2px solid $danger;
+    }
+}
+
+.add, .edit, .delete {
+    @include size(50px, 200px);
+    padding: $pad;
+    border: 2px solid white;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    &:hover {
+        text-decoration: none;
+        transition: color .3s ease, background .3s ease, border .3s ease;
+    }
+
+}
+
+
