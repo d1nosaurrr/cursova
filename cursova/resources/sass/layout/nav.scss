@@ -1,0 +1,63 @@
+@import '../variables';
+
+ul {
+    list-style: none;
+}
+
+.categories {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $yellow;
+}
+
+.menu {
+    li {
+        position: relative;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        padding: $pad 1.5em;
+        color: $txt-light;
+        transition: background-color .22s ease, color .22s ease;
+
+        &:hover {
+            text-decoration: none;
+            background-color: $grey;
+            color: $txt-light;
+        }
+    }
+}
+
+.menu > li, .menu > a {
+    display: inline-block;
+}
+
+.submenu {
+    position: absolute;
+    background-color: $yellow;
+    left: 0;
+    @include size(auto, 200px);
+    display: none;
+}
+
+.submenu2 {
+    position: absolute;
+    background-color: $yellow;
+    @include size(auto , 200px);
+    left: 100%;
+    top: 0;
+    display: none;
+}
+
+.menu li:hover > .submenu{
+    display: block;
+}
+
+.submenu li:hover > .submenu2{
+    display: block;
+}

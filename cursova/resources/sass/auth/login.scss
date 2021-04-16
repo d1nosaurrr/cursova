@@ -1,0 +1,45 @@
+@import '../variables';
+
+.box {
+    width: 300px;
+    padding: 40px;
+    background-color: #FFCB73;
+    text-align: center;
+    border-radius: 25px;
+
+    h1 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .username, .password, .submit {
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #5ED1BA;
+        padding: 14px 20px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 25px;
+        transition: 0.25s;
+
+        .submit {
+
+            border: 2px solid #1F7A68;
+            padding: 14px 10px;
+            cursor: pointer;
+
+            &:hover {
+                background: #1F7A68;
+            }
+        }
+
+        &:focus {
+            width: 280px;
+            border-color: #1F7A68;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import '../variables';
+
+.header {
+    background-color: $grey;
+    justify-content: space-evenly;
+    @include size(60px, 100%);
+    padding-top: $pad + 10;
+}
+
+.nav-list {
+    font-size: 20px;
+
+    div {
+        width: 95px;
+    }
+
+    div a {
+        text-decoration: none;
+        color: $txt-grey;
+    }
+}
+
+.logo {
+    width: 285px;
+    font-size: 30px;
+    font-style: italic;
+
+    a {
+        text-decoration: none;
+        color: #38c172;
+    }
+}
+
+.login {
+    width: 285px;
+    font-size: 20px;
+    text-decoration: none;
+    color: $txt-light;
+}
+
+
+

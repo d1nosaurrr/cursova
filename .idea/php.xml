@@ -109,6 +109,12 @@
       <path value="$PROJECT_DIR$/cursova/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/cursova/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/cursova/vendor/laravel/breeze" />
+      <path value="$PROJECT_DIR$/cursova/vendor/codeception/stub" />
+      <path value="$PROJECT_DIR$/cursova/vendor/codeception/codeception" />
+      <path value="$PROJECT_DIR$/cursova/vendor/codeception/phpunit-wrapper" />
+      <path value="$PROJECT_DIR$/cursova/vendor/codeception/lib-asserts" />
+      <path value="$PROJECT_DIR$/cursova/vendor/behat/gherkin" />
+      <path value="$PROJECT_DIR$/cursova/vendor/symfony/yaml" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">

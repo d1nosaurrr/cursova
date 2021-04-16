@@ -109,6 +109,12 @@
       <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/laravel/ui" />
       <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/laravel/breeze" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/codeception/stub" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/codeception/codeception" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/codeception/phpunit-wrapper" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/codeception/lib-asserts" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/behat/gherkin" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/symfony/yaml" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

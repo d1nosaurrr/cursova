@@ -1,10 +1,6 @@
 .box {
   width: 300px;
   padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: #FFCB73;
   text-align: center;
   border-radius: 25px;
@@ -14,7 +10,7 @@
   text-transform: uppercase;
   font-weight: 500;
 }
-.box input[type=text], .box input[type=password] {
+.box .username, .box .password {
   background: none;
   display: block;
   margin: 20px auto;
@@ -27,11 +23,11 @@
   border-radius: 25px;
   transition: 0.25s;
 }
-.box input[type=text] :focus, .box input[type=password] :focus {
+.box .username:focus, .box .password:focus {
   width: 280px;
   border-color: #1F7A68;
 }
-.box input[type=submit] {
+.box .submit {
   background: none;
   display: block;
   margin: 20px auto;
@@ -45,8 +41,8 @@
   transition: 0.25s;
   cursor: pointer;
 }
-.box input[type=submit] :hover {
+.box .submit:hover {
   background: #1F7A68;
 }
 
-/*# sourceMappingURL=login_style.css.map */
+/*# sourceMappingURL=auth.css.map */

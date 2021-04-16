@@ -4,21 +4,19 @@
 // Variables
 @import 'variables';
 
-body {
+html, body {
+    height: 100%;
+}
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
+@import "layout/header";
+@import "layout/footer";
+@import "layout/nav";
+@import "auth/login";
+@import "auth/register";
+@import "schema/content";
 
-.flex-col {
-    display: flex;
-    flex-direction: column;
-}
-@import "layout_styles/header";
-@import "layout_styles/footer";
-@import "categories-nav";
-@import "login_style";

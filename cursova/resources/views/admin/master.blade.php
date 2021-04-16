@@ -13,27 +13,7 @@
 <body>
 @include('layout.header')
 <main class="content flex-col">
-@yield('login')
 @yield('content')
-<!--div class="promotions">
-        <div class="disp">ddd
-        </div>
-    </div>
-
-        <div class="popular">Топ товарів</div>
-        <div class="grid-container">
-            <div class="grid-item">1</div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-        </div>
-    <div class="news">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div!-->
 </main>
 
 <footer class="footer flex-col">

@@ -1,5 +1,6 @@
 #primary_nav_wrap {
   margin-top: 15px;
+  background: yellow;
 }
 
 #primary_nav_wrap ul {
@@ -33,7 +34,7 @@
 }
 
 #primary_nav_wrap ul li:hover {
-  background: #f6f6f6;
+  background: yellow;
 }
 
 #primary_nav_wrap ul ul {
@@ -64,4 +65,4 @@
   display: block;
 }
 
-/*# sourceMappingURL=categories-nav.css.map */
+/*# sourceMappingURL=nav.css.map */

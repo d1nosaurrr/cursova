@@ -1,31 +1,39 @@
-// Body
-$body-bg: #f8fafc;
-
-// Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
-
-// Colors
+// === COLORS === //
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
 $red: #e3342f;
 $orange: #f6993f;
-$yellow: #ffed4a;
+$yellow: rgb(248, 205, 88);
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
-
-$grey: #545454;
+$grey: rgb(51, 51, 51);
 $txt-light: #ffffff;
 $txt-grey: #c6c6c6;
+// === / COLORS === //
+
 
 $pad: 10px;
 
+// === MIXIN === //
 @mixin size($h,$w) {
     height: $h;
     width: $w;
 }
 
+// === / MIXIN === //
+
+// === DEFAULT CLASS === //
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+// === / DEFAULT CLASS === //
