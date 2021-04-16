@@ -1,4 +1,5 @@
 <ul class="menu">
+    @if(isset($categories))
     @foreach($categories as $category)
         <li>
             <a href="{{ route('category', $category->id) }}">
@@ -17,10 +18,5 @@
             </ul>
         </li>
     @endforeach
+        @endif
 </ul>
-<!--
-SELECT p.title,p.price,sb.title FROM product p INNER JOIN subcategories  sb on p.category = sb.id
-
-
-
-!-->

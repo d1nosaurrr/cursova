@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\MainController;
+use \App\Http\Controllers\NavController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +17,7 @@ use \App\Http\Controllers\MainController;
 |
 */
 
-Route::get('/',[MainController::class, 'index'])->name('main');
+Route::get('/', [MainController::class, 'index'])->name('main');
 
 
 Route::resource('admin/product', 'App\Http\Controllers\AdminController', ['parameters' => [
@@ -24,11 +28,18 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
-Auth::routes();
+Auth::routes([
+    'reset' => false,
+    'confirm' => false,
+    'verify' => false,
+]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('/{link}', [NavController::class, 'index'])->name('go-to');
 
 Route::get('/categories', function () {
     return view('layout.category');

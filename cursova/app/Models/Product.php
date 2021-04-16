@@ -31,4 +31,12 @@ class Product extends Model
             ->select('*')
             ->get();
     }
+
+    public function hit_products()
+    {
+        return DB::table('product')
+            ->select('*')
+            ->where('rate', '>=', 4)
+            ->get();
+    }
 }

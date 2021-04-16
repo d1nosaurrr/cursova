@@ -38,10 +38,10 @@ html, body {
 }
 
 .nav-list {
-  font-size: 20px;
+  font-size: 18px;
 }
 .nav-list div {
-  width: 95px;
+  width: 160px;
 }
 .nav-list div a {
   text-decoration: none;
@@ -49,7 +49,7 @@ html, body {
 }
 
 .logo {
-  width: 285px;
+  width: 320px;
   font-size: 30px;
   font-style: italic;
 }
@@ -59,7 +59,7 @@ html, body {
 }
 
 .login {
-  width: 285px;
+  width: 320px;
   font-size: 20px;
   text-decoration: none;
   color: #ffffff;
@@ -127,9 +127,10 @@ ul {
   max-width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: #f8cd58;
+  font-size: 18px;
 }
 
 .menu li {
@@ -139,7 +140,7 @@ ul {
   text-decoration: none;
   display: block;
   padding: 10px 1.5em;
-  color: #ffffff;
+  color: #000000;
   transition: background-color 0.22s ease, color 0.22s ease;
 }
 .menu a:hover {
@@ -189,104 +190,12 @@ ul {
   flex-direction: column;
 }
 
-.box {
-  width: 300px;
-  padding: 40px;
-  background-color: #FFCB73;
-  text-align: center;
-  border-radius: 25px;
-}
-.box h1 {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.box .username, .box .password, .box .submit {
-  background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #5ED1BA;
-  padding: 14px 20px;
-  width: 200px;
-  outline: none;
-  color: white;
-  border-radius: 25px;
-  transition: 0.25s;
-}
-.box .username .submit, .box .password .submit, .box .submit .submit {
-  border: 2px solid #1F7A68;
-  padding: 14px 10px;
-  cursor: pointer;
-}
-.box .username .submit:hover, .box .password .submit:hover, .box .submit .submit:hover {
-  background: #1F7A68;
-}
-.box .username:focus, .box .password:focus, .box .submit:focus {
-  width: 280px;
-  border-color: #1F7A68;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.box {
-  width: 300px;
-  padding: 40px;
-  background-color: #FFCB73;
-  text-align: center;
-  border-radius: 25px;
-}
-.box h1 {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.box .username, .box .password, .box .submit {
-  background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #5ED1BA;
-  padding: 14px 20px;
-  width: 200px;
-  outline: none;
-  color: white;
-  border-radius: 25px;
-  transition: 0.25s;
-}
-.box .username .submit, .box .password .submit, .box .submit .submit {
-  border: 2px solid #1F7A68;
-  padding: 14px 10px;
-  cursor: pointer;
-}
-.box .username .submit:hover, .box .password .submit:hover, .box .submit .submit:hover {
-  background: #1F7A68;
-}
-.box .username:focus, .box .password:focus, .box .submit:focus {
-  width: 280px;
-  border-color: #1F7A68;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
 .content {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 70%;
 }
 
 .promotions {
@@ -294,25 +203,25 @@ ul {
   width: 70%;
   margin: 25px;
   border: 2px solid red;
+  max-width: 100%;
 }
 
 .popular {
   background-color: #f8cd58;
-  width: 60%;
   padding: 10px;
+  margin-top: 15px;
+  max-width: 100%;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  background-color: #2196F3;
   padding: 10px;
   height: auto;
   width: 60%;
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;

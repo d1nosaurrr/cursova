@@ -1,4 +1,4 @@
-@extends('guest.index')
+@extends('schema.index')
 
 @section('content')
     <h1>Оплата</h1>

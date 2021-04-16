@@ -1,1 +1,1 @@
-@extends('guest.index')
+@extends('schema.index')

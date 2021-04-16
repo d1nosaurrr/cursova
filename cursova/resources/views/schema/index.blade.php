@@ -8,36 +8,39 @@
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Головна сторінка</title>
+    <title>@yield('title')</title>
 </head>
 <body>
 @include('layout.header')
-<main class="content flex-col">
-@yield('login')
-@yield('content')
-<!--div class="promotions">
-        <div class="disp">ddd
-        </div>
-    </div>
 
-        <div class="popular">Топ товарів</div>
-        <div class="grid-container">
-            <div class="grid-item">1</div>
+<main class="content">
+    @yield('login')
+    @yield('content')
+    <div class="popular">Топ товарів</div>
+    <div class="grid-container">
+
+        @foreach($hit_products as $hit_product)
+            <div class="grid-item">{{$hit_product->title}}</div>
             <div class="grid-item">2</div>
             <div class="grid-item">3</div>
             <div class="grid-item">4</div>
             <div class="grid-item">5</div>
-        </div>
-    <div class="news">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div!-->
+        @endforeach
+    </div>
+    <!--div class="promotions">
+    <div class="disp">ddd
+    </div>
+</div>
+
+
+<div class="news">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div!-->
 </main>
 
-<footer class="footer flex-col">
-    @include('layout.footer')
-</footer>
+@include('layout.footer')
 </body>
 </html>

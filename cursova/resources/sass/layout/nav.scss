@@ -8,9 +8,10 @@ ul {
     max-width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: $yellow;
+    font-size: 18px;
 }
 
 .menu {
@@ -22,7 +23,7 @@ ul {
         text-decoration: none;
         display: block;
         padding: $pad 1.5em;
-        color: $txt-light;
+        color: #000000;
         transition: background-color .22s ease, color .22s ease;
 
         &:hover {
