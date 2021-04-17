@@ -30,19 +30,19 @@
     }
 }
 
+
 .add, .edit, .delete {
-    @include size(50px, 200px);
+    @include size(50px, 150px);
     padding: $pad;
     border: 2px solid white;
     text-align: center;
     text-decoration: none;
     color: white;
     border-radius: 25px;
+
     &:hover {
         text-decoration: none;
         transition: color .3s ease, background .3s ease, border .3s ease;
     }
-
 }
-
 

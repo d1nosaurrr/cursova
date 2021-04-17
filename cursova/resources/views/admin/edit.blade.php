@@ -1,31 +1,41 @@
 @extends('admin.master')
+@foreach($products as $product)
+    @section('title','Редагування '.$product->title )
 
 @section('content')
     <a href="{{route('product.index')}}">< На головну</a>
-    <form action="{{route('product.store')}}" class="add-form">
+    <form action="{{route('product.update',['id'=>$product->id])}}" class="crud-form" method="post">
+        <input name="_method" type="hidden" value="PUT">
         @csrf
-        <div class="form">
-            <div class="title">
-                <input type="text" name="title" placeholder="Назва товару" required>
-            </div>
-            <div class="category">
-                <select name="category" class="category-selector">
-                    @foreach($subcategories as $subcategory)
-                        <option value='{{ $subcategory->id }}'>{{ $subcategory->title }}</option>
-                    @endforeach
-                </select>
-
-            </div>
-            <div class="price">
-                <input type="text" name="price" placeholder="Ціна" required>
-            </div>
-            <div class="count">
-                <input type="text" name="count" placeholder="Кількість на складі" required>
-            </div>
-            <div class="description">
-                <textarea name="description" cols="30" rows="10" placeholder="Опис" required></textarea>
-            </div>
-            <button type="submit">Редагувати!</button>
+        <div class="datainput">
+            <input class="validate" name="title" required="" type="text" value='{{$product->title}}'/>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Назва товару</label>
         </div>
+        <div class="datainput">
+            <select name="category">
+                @foreach($subcategories as $subcategory)
+                    <option value='{{ $subcategory->id }}'>{{ $subcategory->title }}</option>
+                @endforeach
+            </select>
+            <label>Категорії</label>
+        </div>
+        <div class="datainput">
+            <input class="validate" name="price" required="" type="number" value='{{$product->price}}'/>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Ціна</label>
+        </div>
+        <div class="datainput">
+            <input class="validate" name="count" required type="number" value='{{$product->count}}'/>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Кількість на складі</label>
+        </div>
+        <div class="datainput">
+            <textarea placeholder='' name="description" maxlength='5000' row='1' required>{{$product->description}}</textarea>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Опис</label>
+        </div>
+        <button class="send_form" type="submit">Редагувати</button>
     </form>
 @endsection
+@endforeach

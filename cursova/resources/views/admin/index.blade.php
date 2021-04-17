@@ -26,9 +26,13 @@
                             Кількість на складі: {{$product->count}}</p>
                         </details>
                     </td>
-                    <td>
+                    <td class="flex-row">
                         <a href="{{route('product.edit',['id' => $product->id])}}" class="edit">Редагувати</a>
-                        <a href="{{route('product.destroy',['id' => $product->id])}}" class="delete">Видалити</a>
+                        <form action="{{ route('product.destroy' , $product->id)}}" method="POST">
+                            <input name="_method" type="hidden" value="DELETE">
+                            {{ csrf_field() }}
+                            <button type="submit" class="delete">Видалити</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

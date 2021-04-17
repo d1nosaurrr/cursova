@@ -5,38 +5,76 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use SoftDeletes, Translatable;
 
 class Product extends Model
 {
+    protected $table = 'product';
+    public $timestamps = false;
     protected $fillable = [
         'title', 'price', 'category_id', 'description', 'image'];
 
-    public function category()
+    public function query_products()
     {
-        return $this->belongsTo(Category::class);
-    }
+        return DB::table('product', 'p')
+            ->select('p.id', 'p.title', 'p.price',
+                'p.rate', 'p.description', 'p.count', 'p.image',
+                'subcategories.title as sub_title')
+            ->join('subcategories', 'p.category_id', '=', 'subcategories.id');
 
-    public function product($id)
-    {
-        return DB::table('product')
-            ->select('*')
-            ->where('product.id', $id)
-            ->get();
     }
 
     public function products()
     {
-        return DB::table('product')
-            ->select('*')
+        return $this->query_products()
             ->get();
     }
 
-    public function hit_products()
+    public function product_by_id($id)
     {
-        return DB::table('product')
-            ->select('*')
-            ->where('rate', '>=', 4)
+        return $this->query_products()
+            ->where('p.id', $id)
             ->get();
     }
+
+    public function product_by_title($title)
+    {
+        return $this->query_products()
+            ->where('p.title', 'like', '%' . $title . '%')
+            ->get();
+    }
+
+    public function product_by_category($id)
+    {
+        return $this->query_products()
+            ->where('p.category_id', $id)
+            ->get();
+    }
+
+
+    public function hit_products()
+    {
+        return $this->query_products()
+            ->where('p.rate', '>=', 4)
+            ->orderBy('p.rate' ,'desc')
+            ->get();
+    }
+
+    public function filter($option)
+    {
+        switch ($option) {
+            case price_to_low:
+                $order = orderBy('p.price', 'asc');
+                break;
+            case price_to_low:
+                $order = orderBy('p.price', 'desc');
+                break;
+            case rate:
+                $order = orderBy('p.rate', 'desc');
+                break;
+        }
+        return $this->query_products()
+            ->$order
+            ->get();
+    }
+
 }

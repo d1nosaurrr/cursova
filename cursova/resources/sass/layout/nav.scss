@@ -12,6 +12,7 @@ ul {
     align-items: center;
     background-color: $yellow;
     font-size: 18px;
+    flex-basis: 60px;
 }
 
 .menu {
@@ -19,7 +20,7 @@ ul {
         position: relative;
     }
 
-    a {
+    a, span{
         text-decoration: none;
         display: block;
         padding: $pad 1.5em;

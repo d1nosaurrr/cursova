@@ -1,0 +1,58 @@
+@charset "UTF-8";
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-card-container {
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.flex-card-container > div {
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.flex-title {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+.flex-img {
+  height: 550px;
+  width: 550px;
+  border: 2px solid rebeccapurple;
+}
+
+.flex-card-container .flex-rate .star {
+  font-size: 50px;
+  color: #d6b10c;
+}
+.flex-card-container .flex-rate .star::before {
+  content: "★";
+}
+
+.price-rate {
+  margin: 50px 20px;
+}
+
+.flex-card-container .flex-row .buy {
+  position: absolute;
+  right: 0;
+}
+
+.flex-card-container .price-rate .flex-description {
+  width: 100%;
+}
+
+/*# sourceMappingURL=product-card.css.map */

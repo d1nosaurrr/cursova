@@ -1,6 +1,6 @@
 @import "../variables";
 
-.crud-form {
+.buy-form {
     max-width: 70%;
 
 }
@@ -84,7 +84,7 @@
     }
 }
 
-.crud-form {
+.buy-form {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
@@ -132,7 +132,7 @@
 }
 
 
-form.crud-form {
+form.buy-form {
     box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
     border-radius: 0.5rem;
     padding: 20px;
@@ -142,7 +142,7 @@ form.crud-form {
     line-height: 1.5;
 }
 
-.crud-form button.send_form {
+.buy-form button.send_form {
     color: #fff;
     background: #21a51f;
     text-decoration: none;
