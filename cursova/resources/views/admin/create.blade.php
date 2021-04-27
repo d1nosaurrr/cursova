@@ -1,5 +1,7 @@
 @extends('admin.master')
 
+@section('title', 'Admin create')
+
 @section('content')
     <a href="{{route('product.index')}}">< На головну</a>
     <form action="{{route('product.store')}}" method="post" class="crud-form"

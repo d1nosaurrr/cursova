@@ -1,12 +1,12 @@
 @import "../variables";
 
-.add {
-    background-color: $success;
+.info {
+    background-color: $info;
 
     &:hover {
         background: 0;
-        color: $success;
-        border: 2px solid $success;
+        color: black;
+        border: 2px solid $info;
     }
 }
 
@@ -15,7 +15,7 @@
 
     &:hover {
         background: 0;
-        color: $warning;
+        color: black;
         border: 2px solid $warning;
     }
 }
@@ -25,19 +25,19 @@
 
     &:hover {
         background: 0;
-        color: $danger;
+        color: black;
         border: 2px solid $danger;
     }
 }
 
 
-.add, .edit, .delete {
+.info, .edit, .delete {
     @include size(50px, 150px);
     padding: $pad;
     border: 2px solid white;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: black;
     border-radius: 25px;
 
     &:hover {

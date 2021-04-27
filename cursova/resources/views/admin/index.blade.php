@@ -1,14 +1,15 @@
 @extends('admin.master')
 
+@section('title', 'Admin home')
+
 @section('content')
-    <a href="{{route('product.create')}}" class="add">Додати товар</a>
     @if(isset($products))
         <table class="product-list">
             <thead>
             <tr>
                 <th>id</th>
                 <th>Назва товару</th>
-                <th>Дії</th>
+                <th class="buttons">Дії</th>
             </tr>
             </thead>
             <tbody>
@@ -26,7 +27,8 @@
                             Кількість на складі: {{$product->count}}</p>
                         </details>
                     </td>
-                    <td class="flex-row">
+                    <td class="buttons flex-row">
+                        <a href="{{route('product.show',['id' => $product->id])}}" class="info">Переглянути</a>
                         <a href="{{route('product.edit',['id' => $product->id])}}" class="edit">Редагувати</a>
                         <form action="{{ route('product.destroy' , $product->id)}}" method="POST">
                             <input name="_method" type="hidden" value="DELETE">

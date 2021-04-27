@@ -22,12 +22,10 @@ Route::get('/', [MainController::class, 'index'])->name('main');
 
 Route::resource('admin/product', 'App\Http\Controllers\AdminController', ['parameters' => [
     'product' => 'id'
-]]);
+]])->middleware('auth');
 
 Route::get('/dashboard', 'App\Http\Controllers\AdminController@index')
     ->middleware(['auth'])->name('dashboard');
-
-require __DIR__ . '/auth.php';
 
 Auth::routes([
     'reset' => false,
@@ -45,10 +43,6 @@ Route::get('/category/{id}', [MainController::class, 'category_nav']
 
 Route::get('/search/', [MainController::class, 'search']
 )->name('search');
-
-Route::get('/in-progress', function () {
-    return view('user_nav/in_progress');
-})->name('in_progress');
 
 Route::get('/product/{id}', [MainController::class, 'product_card']
 )->name('product-card');

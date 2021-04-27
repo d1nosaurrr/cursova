@@ -5,32 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet"><!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <title>@yield('title')</title>
 </head>
 <body>
 @include('layout.header')
+@include('layout.nav')
 
-<main class="content flex-col">
+<main class="container">
     @yield('login')
     @yield('content')
 
-
-
-    @if(isset($hit_products))
-        <div class="popular">Топ товарів</div>
-        <div class="wrap-container">
-            @foreach($hit_products  as $hit_product)
-                <div class="wrap-item">
-                    <p class="title">{{$hit_product->title}}</p>
-                    <img src="{{asset('/uploads/'.$hit_product->image)}}" alt=""/>
-                    <a href="{{route('buy')}}">Купити</a>
-                </div>
-            @endforeach
-        </div>
-    @endif
 </main>
 
 @include('layout.footer')

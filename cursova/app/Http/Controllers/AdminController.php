@@ -7,6 +7,7 @@ use App\Models\Product;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
@@ -77,7 +78,8 @@ dd($request);
      */
     public function show($id)
     {
-        //
+        return view('admin.info', ['categories' => (new Category)->categories(),
+            'product' => (new Product)->product_by_id($id)]);
     }
 
     /**

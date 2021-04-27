@@ -1,6 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8";
-
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -44,171 +42,6 @@ body {
   flex-direction: column;
 }
 
-.header {
-  background-color: #333333;
-  justify-content: space-evenly;
-  align-items: baseline;
-  height: 60px;
-  width: 100%;
-  padding: 10px;
-}
-
-.logo {
-  max-width: 30%;
-  font-size: 30px;
-  font-style: italic;
-  text-align: left;
-}
-
-.logo a {
-  text-decoration: none;
-  color: #38c172;
-}
-
-.login {
-  max-width: 30%;
-  font-size: 20px;
-  text-align: right;
-}
-
-.login a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.search {
-  max-width: 30%;
-  border: 0;
-  margin-bottom: 5px;
-}
-
-.search input {
-  min-width: 100px;
-  height: 30px;
-  width: auto;
-  margin-right: 0;
-  padding: 2px;
-  border: 0;
-  height: 30px;
-}
-
-.search button {
-  height: 30px;
-  width: 60px;
-  color: white;
-  background-color: #f8cd58;
-  padding: 2px;
-  border: 0;
-}
-
-.admin-header {
-  background-color: #333333;
-  justify-content: space-evenly;
-  height: 60px;
-  width: 100%;
-}
-
-.admin-header .log {
-  padding: 20px;
-}
-
-.admin-header .log .log-block {
-  width: 320px;
-  font-size: 20px;
-  text-align: center;
-  padding: 10px;
-}
-
-.admin-header .log .log-block .login,
-.admin-header .log .log-block .logout {
-  width: 150px;
-  color: white;
-}
-
-.admin-header .log .log-block a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.admin-header .log .log-block a:hover {
-  color: #c6c6c6;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer {
-  background-color: #333333;
-  height: 200px;
-  width: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin-top: 10px;
-  padding: 1rem;
-}
-
-.footer .info {
-  justify-content: space-evenly;
-}
-
-.clients,
-.about,
-.cabinet {
-  padding: 10px;
-  height: auto;
-  width: 150px;
-}
-
-.clients a,
-.clients h1,
-.about a,
-.about h1,
-.cabinet a,
-.cabinet h1 {
-  text-align: left;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-.cop-text {
-  text-align: center;
-  color: #c6c6c6;
-  padding: 10px;
-}
-
-hr {
-  width: 100%;
-  border: 2px solid black;
-}
-
-.admin-footer {
-  background-color: #333333;
-  height: auto;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
 ul {
   list-style: none;
 }
@@ -227,25 +60,20 @@ ul {
 .menu li {
   position: relative;
 }
-
-.menu a,
-.menu span {
+.menu a, .menu span {
   text-decoration: none;
   display: block;
   padding: 10px 1.5em;
   color: #000000;
   transition: background-color 0.22s ease, color 0.22s ease;
 }
-
-.menu a:hover,
-.menu span:hover {
+.menu a:hover, .menu span:hover {
   text-decoration: none;
   background-color: #333333;
   color: #ffffff;
 }
 
-.menu > li,
-.menu > a {
+.menu > li, .menu > a {
   display: inline-block;
 }
 
@@ -293,152 +121,11 @@ ul {
   width: 94%;
 }
 
-.msg {
-  height: 30px;
-  width: 90px;
-  font-size: 25px;
-  background-color: #21a51f;
-}
-
-.promotions {
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-.promotions img {
-  margin: 0 auto;
-  max-width: 100%;
-}
-
 .popular {
   background-color: #f8cd58;
   padding: 10px;
   margin-top: 15px;
   max-width: 100%;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-card-container {
-  margin: 0 auto;
-  height: auto;
-  width: 100%;
-  display: flex;
-  padding: 10px;
-}
-
-.flex-card-container > div {
-  padding: 10px;
-  font-size: 25px;
-}
-
-.flex-card-container .flex-title {
-  text-align: left;
-  padding: 10px;
-  border-bottom: 2px solid black;
-}
-
-.flex-card-container .flex-info {
-  position: relative;
-  justify-content: space-between;
-}
-
-.flex-card-container .flex-info .flex-img {
-  border: 1px solid black;
-}
-
-.flex-card-container .flex-info .flex-img img {
-  height: 550px;
-  width: 550px;
-}
-
-.flex-card-container .flex-info .price-rate {
-  justify-content: center;
-}
-
-.flex-card-container .flex-info .price-rate .flex-rate .star {
-  font-size: 50px;
-  color: #d6b10c;
-}
-
-.flex-card-container .flex-info .price-rate .flex-rate .star::before {
-  content: "★";
-}
-
-.flex-card-container .flex-info .buy {
-  position: absolute;
-  right: 0;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.wrap-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  justify-content: space-evenly;
-  padding: 10px;
-  height: auto;
-  width: 100%;
-}
-
-.wrap-item {
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-  margin: 10px;
-  height: 450px;
-  width: 30%;
-}
-
-.wrap-item .title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.wrap-item img {
-  height: 300px;
-  width: 300px;
-}
-
-.wrap-item a,
-.wrap-item span {
-  font-size: 20px;
-  height: 100px;
-  width: 100%;
-  padding: 10px;
-}
-
-.filter-form {
-  margin: 0 auto;
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-filter .filter-selector {
-  padding: 20px;
-  width: 50%;
 }
 
 .more {
@@ -467,21 +154,23 @@ summary {
   margin: 5px;
   border: 2px solid black;
 }
-
 .product-list thead {
   height: 30px;
   font-size: 25px;
   text-align: center;
   background-color: #c3c3c3;
 }
-
 .product-list thead th {
+  text-align: center;
   border: 1px solid black;
 }
-
 .product-list tbody td {
   border: 1px solid black;
   padding: 5px;
+}
+.product-list .buttons {
+  width: 500px;
+  justify-content: space-evenly;
 }
 
 .flex-row {
@@ -494,52 +183,44 @@ summary {
   flex-direction: column;
 }
 
-.add {
-  background-color: #38c172;
+.info {
+  background-color: #6cb2eb;
 }
-
-.add:hover {
+.info:hover {
   background: 0;
-  color: #38c172;
-  border: 2px solid #38c172;
+  color: black;
+  border: 2px solid #6cb2eb;
 }
 
 .edit {
   background-color: #f8cd58;
 }
-
 .edit:hover {
   background: 0;
-  color: #f8cd58;
+  color: black;
   border: 2px solid #f8cd58;
 }
 
 .delete {
   background-color: #e3342f;
 }
-
 .delete:hover {
   background: 0;
-  color: #e3342f;
+  color: black;
   border: 2px solid #e3342f;
 }
 
-.add,
-.edit,
-.delete {
+.info, .edit, .delete {
   height: 50px;
   width: 150px;
   padding: 10px;
   border: 2px solid white;
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: black;
   border-radius: 25px;
 }
-
-.add:hover,
-.edit:hover,
-.delete:hover {
+.info:hover, .edit:hover, .delete:hover {
   text-decoration: none;
   transition: color 0.3s ease, background 0.3s ease, border 0.3s ease;
 }
@@ -554,15 +235,10 @@ summary {
   flex-direction: column;
 }
 
-.crud-form {
-  max-width: 70%;
-}
-
 .datainput {
   position: relative;
   margin: 5px 0 20px;
 }
-
 .datainput p {
   font-size: 12px;
   background: #eee;
@@ -570,7 +246,6 @@ summary {
   padding: 5px 15px;
   border-radius: 0.5rem;
 }
-
 .datainput select {
   padding: 12px 0;
   color: #555;
@@ -581,9 +256,7 @@ summary {
   outline: none;
   background: #fff;
 }
-
-.datainput input,
-.datainput textarea {
+.datainput input, .datainput textarea {
   font-size: 15px;
   padding: 15px 0;
   display: block;
@@ -591,14 +264,10 @@ summary {
   border: none;
   border-bottom: 1px solid #ddd;
 }
-
-.datainput input:focus,
-.datainput textarea:focus {
+.datainput input:focus, .datainput textarea:focus {
   outline: none;
 }
-
-.datainput input:focus label,
-.datainput textarea:focus label {
+.datainput input:focus label, .datainput textarea:focus label {
   color: #999;
   font-size: 14px;
   font-weight: 400;
@@ -608,7 +277,6 @@ summary {
   top: 18px;
   transition: 0.2s ease all;
 }
-
 .datainput input:focus ~ label,
 .datainput input:valid ~ label,
 .datainput textarea:focus ~ label,
@@ -617,20 +285,17 @@ summary {
   font-size: 14px;
   color: #21a51f;
 }
-
 .datainput input:focus ~ .bar:before,
 .datainput input:focus ~ .bar:after,
 .datainput textarea:focus ~ .bar:before,
 .datainput textarea:focus ~ .bar:after {
   width: 50%;
 }
-
 .datainput input:focus ~ .highlight,
 .datainput textarea:focus ~ .highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
           animation: inputHighlighter 0.3s ease;
 }
-
 .datainput input:focus ~ label,
 .datainput input:valid ~ label,
 .datainput textarea:focus ~ label,
@@ -646,7 +311,6 @@ summary {
   margin: 0 auto;
   box-sizing: border-box;
 }
-
 .crud-form textarea {
   min-height: 120px;
 }
@@ -656,9 +320,7 @@ summary {
   display: block;
   width: 100%;
 }
-
-.bar:before,
-.bar:after {
+.bar:before, .bar:after {
   content: "";
   height: 2px;
   width: 0;
@@ -667,11 +329,9 @@ summary {
   background: #21a51f;
   transition: 0.2s ease all;
 }
-
 .bar:before {
   left: 50%;
 }
-
 .bar:after {
   right: 50%;
 }
@@ -707,5 +367,3 @@ form.crud-form {
   letter-spacing: 0.5px;
   font-size: 15px;
 }
-
-

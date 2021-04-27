@@ -1,26 +1,23 @@
-<ul class="menu">
+<ul class="dropdown-menu" role="menu">
     @if(isset($categories))
         @foreach($categories as $category)
-
-            <li>
+            <li class="dropdown-submenu">
                 <span>
                     {{ $category->title }}
                 </span>
-                    <ul class="submenu">
+                <ul class="dropdown-menu">
+                    @foreach($subcategories as $subcategory)
+                        @if($category->id == $subcategory->parent)
+                            <li>
+                                <a href="{{ route('category', $subcategory->id) }}">
+                                    {{ $subcategory->title }}
+                                </a>
+                            </li>
+                        @endif
+                    @endforeach
 
-                        @foreach($subcategories as $subcategory)
-                            @if($category->id == $subcategory->parent)
-                                <li>
-                                    <a href="{{ route('category', $subcategory->id) }}">
-                                        {{ $subcategory->title }}
-                                    </a>
-                                </li>
-                            @endif
-                        @endforeach
-
-                    </ul>
+                </ul>
             </li>
-
         @endforeach
     @endif
 </ul>
