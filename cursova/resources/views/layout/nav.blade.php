@@ -1,26 +1,19 @@
-<ul class="menu">
+<nav class="d-flex justify-content-center mt-2">
     @if(isset($categories))
         @foreach($categories as $category)
-
-            <li>
-                <span>
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-warning dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                     {{ $category->title }}
-                </span>
-                    <ul class="submenu">
-
-                        @foreach($subcategories as $subcategory)
-                            @if($category->id == $subcategory->parent)
-                                <li>
-                                    <a href="{{ route('category', $subcategory->id) }}">
-                                        {{ $subcategory->title }}
-                                    </a>
-                                </li>
-                            @endif
-                        @endforeach
-
-                    </ul>
-            </li>
+                </button>
+                <ul class="dropdown-menu">
+                    @foreach($subcategories as $subcategory)
+                        @if($category->id == $subcategory->parent)
+                            <li><a class="dropdown-item" href="{{ route('category',['id'=>$subcategory->id])}}"> {{ $subcategory->title }}</a></li>
+                @endif
+                @endforeach
+            </div>
 
         @endforeach
     @endif
-</ul>
+</nav>

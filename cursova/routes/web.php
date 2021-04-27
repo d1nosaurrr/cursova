@@ -5,6 +5,7 @@ use App\Http\Controllers\PurchaseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\MainController;
+use \App\Models\Order;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,21 +20,37 @@ use \App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'index'])->name('main');
 
+Route::group([
+    'middleware' => ['auth', 'admin']
+],function () {
+    Route::resource('admin/product', 'App\Http\Controllers\AdminController', ['parameters' => [
+        'product' => 'id'
+    ]]);
+    Route::get('admin/orders', function () {
+        return view('admin.order', ['orders' => (new Order())->getOrder()]);
+    })->name('admin.orders');
 
-Route::resource('admin/product', 'App\Http\Controllers\AdminController', ['parameters' => [
-    'product' => 'id'
-]]);
+});
+
+Route::group([
+    'prefix' => 'user',
+    'as' => 'user.',
+    'middleware' => ['auth', 'admin']
+],function () {
+
+    Route::get('/', function () {
+        return view('user.index');
+    })->name('user.index');
+});
 
 Route::get('/dashboard', 'App\Http\Controllers\AdminController@index')
     ->middleware(['auth'])->name('dashboard');
-
-require __DIR__ . '/auth.php';
 
 Auth::routes([
     'reset' => false,
     'confirm' => false,
     'verify' => false,
-    'register' => false,
+    'register' => true,
 ]);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -46,15 +63,13 @@ Route::get('/category/{id}', [MainController::class, 'category_nav']
 Route::get('/search/', [MainController::class, 'search']
 )->name('search');
 
-Route::get('/in-progress', function () {
-    return view('user_nav/in_progress');
-})->name('in_progress');
-
 Route::get('/product/{id}', [MainController::class, 'product_card']
 )->name('product-card');
 
-Route::get('/buy',function (){
-    return view('script/buy');
-})->name('buy');
+Route::get('/add-to-cart/{id}', [PurchaseController::class, 'index'])->name('add-to-cart');
 
-Route::get('/buy/confirm',[PurchaseController::class, 'index'])->name('confirm-purchase');
+Route::get('/cart/', [PurchaseController::class, 'getCart'])->name('show-shop');
+
+Route::get('/checkout/', [PurchaseController::class, 'getCheckout'])->name('checkout');
+
+Route::post('/checkout/', [PurchaseController::class, 'postCheckout'])->name('checkout');

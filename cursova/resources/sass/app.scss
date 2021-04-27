@@ -26,12 +26,8 @@ body {
     margin: 0;
 }
 
-@import "layout/header";
-@import "layout/footer";
 @import "layout/nav";
 @import "schema/content";
-@import "schema/product-card";
-@import "schema/category";
 @import "admin/detail";
 @import "admin/table";
 @import "admin/buttons";

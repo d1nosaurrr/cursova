@@ -10,6 +10,7 @@
         background-color: #c3c3c3;
 
         th {
+            text-align: center;
             border: 1px solid black;
         }
     }
@@ -17,5 +18,11 @@
     tbody td {
         border: 1px solid black;
         padding: 5px;
+
+    }
+        .buttons {
+            width: 500px;
+            justify-content: space-evenly;
+
     }
 }

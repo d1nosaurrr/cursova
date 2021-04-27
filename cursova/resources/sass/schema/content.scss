@@ -7,13 +7,6 @@
     width: 94%;
 }
 
-
-.msg {
-    @include size(30px, 90px);
-    font-size: 25px;
-    background-color: #21a51f;
-}
-
 .popular {
     background-color: $yellow;
     padding: $pad;

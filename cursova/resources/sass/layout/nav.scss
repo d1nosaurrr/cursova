@@ -1,65 +1,52 @@
-@import '../variables';
-
-ul {
-    list-style: none;
+/* To Dropdown navbar dropdown on hover */
+.navbar-nav > li:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position: relative;
 }
 
-.categories {
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $yellow;
-    font-size: 18px;
-    flex-basis: 60px;
-}
-
-.menu {
-    li {
-        position: relative;
-    }
-
-    a, span{
-        text-decoration: none;
-        display: block;
-        padding: $pad 1.5em;
-        color: #000000;
-        transition: background-color .22s ease, color .22s ease;
-
-        &:hover {
-            text-decoration: none;
-            background-color: $grey;
-            color: $txt-light;
-        }
-    }
-}
-
-.menu > li, .menu > a {
-    display: inline-block;
-}
-
-.submenu {
-    position: absolute;
-    background-color: $yellow;
-    left: 0;
-    @include size(auto, 200px);
-    display: none;
-}
-
-.submenu2 {
-    position: absolute;
-    background-color: $yellow;
-    @include size(auto , 200px);
-    left: 100%;
+.dropdown-submenu>.dropdown-menu {
     top: 0;
-    display: none;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
 }
 
-.menu li:hover > .submenu{
+.dropdown-submenu:hover>.dropdown-menu {
     display: block;
 }
 
-.submenu li:hover > .submenu2{
+.dropdown-submenu>a:after {
     display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+
+    border-radius: 6px 0 6px 6px;
 }
