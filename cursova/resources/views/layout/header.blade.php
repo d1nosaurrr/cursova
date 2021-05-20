@@ -14,7 +14,8 @@
                 </form>
 
                 <div class="d-flex">
-                    <a href="{{route('show-shop')}}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-warning text-decoration-none">
+                    <a href="{{route('show-shop')}}"
+                       class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-warning text-decoration-none">
                         <img width="45" src="{{asset('/uploads/basket.svg')}}" alt="basket">
                         <span class="btn btn-outline-warning">Кошик
                             (<span>{{session()->has('shop') ? session()->get('shop')->quantity : '' }}</span>)</span>

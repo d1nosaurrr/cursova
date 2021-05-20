@@ -47,7 +47,6 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-dd($request);
         $add = new Product();
         $add->title = $request->input('title');
         $add->price = $request->input('price');

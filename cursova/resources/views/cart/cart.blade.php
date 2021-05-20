@@ -15,9 +15,9 @@
             <tbody>
             @foreach($products as $product)
                 <tr>
-                    <th scope="row">{{$product['item']['title']}}</th>
+                    <th scope="row">{{$product['title']}}</th>
                     <td><span>{{$product['qty']}}</span></td>
-                    <td>{{$product['item']['price']}} грн</td>
+                    <td>{{$product['price']}} грн</td>
                 </tr>
                 </tr>
             @endforeach

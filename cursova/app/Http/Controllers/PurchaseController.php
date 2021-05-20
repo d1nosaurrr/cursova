@@ -16,7 +16,6 @@ class PurchaseController extends Controller
         $oldCart = session()->has('cart') ? session()->get('cart') : null;
         $cart = new Cart($oldCart);
         $cart->add($product, $product->id);
-
         $request->session()->put('cart', $cart);
         return redirect()->route('main');
     }
@@ -24,43 +23,37 @@ class PurchaseController extends Controller
     public function getCart()
     {
         if (!session()->has('cart')) {
-            return view('shop.cart', ['products' => null]);
+            return view('cart.cart', ['products' => null]);
         }
         $oldCart = session()->get('cart');
         $cart = new Cart($oldCart);
-
-        return view('shop.cart', ['products' => $cart->items, 'price' => $cart->price]);
+        return view('cart.cart', ['products' => $cart->items, 'price' => $cart->price]);
     }
 
     public function getCheckout()
     {
         if (!session()->has('cart')) {
-            return view('shop.cart');
+            return view('cart.cart');
         }
         $oldCart = session()->get('cart');
         $cart = new Cart($oldCart);
         $total = $cart->price;
-        return view('shop.checkout', ['total' => $total]);
+        return view('cart.checkout', ['total' => $total]);
     }
 
     public function postCheckout(Request $request)
     {
         if (!session()->has('cart')) {
-            return view('shop.cart');
+            return view('cart.cart');
         }
         $oldCart = session()->get('cart');
         $cart = new Cart($oldCart);
-        $total = $cart->price;
         $order = new Order();
-        $order->product = $cart;
+        $order->products = serialize($cart->items);
         $order->name = $request->input('name');
         $order->phone = $request->input('phone');
-        dd($order);
-       $order->save();
-
-
+        $order->save();
         session()->forget('cart');
-        return view('main', ['success' => "Ваше замовлення в обробці"]);
+        return view('user.index');
     }
-
 }
