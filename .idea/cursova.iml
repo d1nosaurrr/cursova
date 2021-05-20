@@ -121,6 +121,11 @@
       <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/codeception/lib-asserts" />
       <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/behat/gherkin" />
       <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/symfony/browser-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/symfony/dom-crawler" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/codeception/lib-innerbrowser" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/codeception/module-phpbrowser" />
+      <excludeFolder url="file://$MODULE_DIR$/cursova/vendor/codeception/module-asserts" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

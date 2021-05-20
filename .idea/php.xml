@@ -115,6 +115,11 @@
       <path value="$PROJECT_DIR$/cursova/vendor/codeception/lib-asserts" />
       <path value="$PROJECT_DIR$/cursova/vendor/behat/gherkin" />
       <path value="$PROJECT_DIR$/cursova/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/cursova/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/cursova/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/cursova/vendor/codeception/lib-innerbrowser" />
+      <path value="$PROJECT_DIR$/cursova/vendor/codeception/module-phpbrowser" />
+      <path value="$PROJECT_DIR$/cursova/vendor/codeception/module-asserts" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3">

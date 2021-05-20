@@ -58,23 +58,4 @@ class Product extends Model
             ->orderBy('p.rate' ,'desc')
             ->get();
     }
-
-    public function filter($option)
-    {
-        switch ($option) {
-            case price_to_low:
-                $order = orderBy('p.price', 'asc');
-                break;
-            case price_to_low:
-                $order = orderBy('p.price', 'desc');
-                break;
-            case rate:
-                $order = orderBy('p.rate', 'desc');
-                break;
-        }
-        return $this->query_products()
-            ->$order
-            ->get();
-    }
-
 }

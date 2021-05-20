@@ -32,3 +32,5 @@ class Category extends Model
             ->get();
     }
 }
+
+
